@@ -45,8 +45,8 @@ void mergeSort(int low, int high)
 
     // step 3
     // fungsi rekursi - memanggil diri sendiri
-    mergesort(low, mid);  // step 3.a
-    mergesort(mid + 1, high); // step 3.b
+    mergeSort(low, mid);  // step 3.a
+    mergeSort(mid + 1, high); // step 3.b
 
     // step 4
     int i = low;     // step 4.a
@@ -97,6 +97,13 @@ void output()
         cout << arr[i] << " ";
     } 
     cout << endl;
+}
+
+int main()
+{
+    input();
+    mergeSort(0, n - 1);
+    output();
 }
 
 
